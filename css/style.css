@@ -1,0 +1,13 @@
+.msheader{
+    background-color: #06131F;
+}
+.msbody{
+    background-color:#1D2D3C ;
+}
+.mscard{
+    background-color: #112030;
+}
+.msimg img{
+    max-width: 100%;
+    height: auto;
+}

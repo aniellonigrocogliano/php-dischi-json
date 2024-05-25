@@ -9,21 +9,29 @@
        crossorigin="anonymous"/>
        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	      <link rel="stylesheet" href="./css/style.css">
     
     <title>Album</title>
 </head>
 <body> 
+  <div id="app" >
     <header class="d-flex flex-row bg-dark">
         <img class="bg-dark p-2 pt-1" src="./img/logo.png">
     </header>
     <main class="bg-info">
-    <div id="app" >
-        <section class="container d-flex flex-wrap">
-        <div v-for="album in listaAlbum" class="col-4 p-3">
-            <div class="card bg-primary" style="width: 18rem;">
+    
+<section class="container d-flex flex-wrap justify-content-center">
+
+        <div v-for="(album, index) in listaAlbum" class="col-4 p-3 text-center fw-bold">
+            <div class="card mscard" style="width: 18rem;">
                 <img :src="album.poster" class="card-img-top p-3" :alt="album.title">
                 <div class="card-body">
-                  <p class="card-text">{{ album.title }}</p>
+                  <p class="card-text text-white"><i class="fa-solid fa-music"></i> {{ album.title }}</p>
+                  <p class="card-text text-white"><i class="fa-solid fa-user-pen"></i> {{ album.author }}</p>
+                  <p class="card-text text-white"><i class="fa-solid fa-icons"></i> {{ album.genre }}</p>
+                  <p class="card-text text-white"><i class="fa-solid fa-calendar-days"></i> {{ album.year }}</p>
+                  <div><i  class="fa-regular fa-thumbs-up text-white text-right"></i></div>
                 </div>
             
         </div>
