@@ -25,6 +25,21 @@ for ($i=0; $i <count($dischi) ; $i++) {
     if(!isset($dischi[$i]["like"])){
         $dischi[$i]["like"]= false;
     };
+    if(($dischi[$i]["title"]==="")){
+        $dischi[$i]["title"]="ND";
+    };
+    if(($dischi[$i]["author"]==="")){
+        $dischi[$i]["author"]="ND";
+    };
+    if(($dischi[$i]["year"]==="")){
+        $dischi[$i]["year"]="ND";
+    };
+    if(($dischi[$i]["genre"]==="")){
+        $dischi[$i]["genre"]="ND";
+    };
+    if(($dischi[$i]["poster"]==="")){
+        $dischi[$i]["poster"]="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
+    };
 };
 file_put_contents("dischi.json", json_encode($dischi));
 $risposta = [
