@@ -78,8 +78,8 @@
               <p class="card-text text-white"><i class="fa-solid fa-icons"></i> {{ album.genre }}</p>
               <p class="card-text text-white"><i class="fa-solid fa-calendar-days"></i> {{ album.year }}</p>
               <div class=" d-flex justify-content-around">
-                <i @click="deleteAlbum(index)" class="fa-solid fa-trash-can  text-danger text-right"></i>
-              <div @click="toggleLike(index)"><i v-show="!album.like" class="fa-regular fa-heart text-white text-right"></i> <i v-show="album.like" class="fa-solid fa-heart text-danger text-right"></i></div>
+                <i @click="deleteAlbum(index)" role="button"  class="fa-solid fa-trash-can  text-danger text-right "></i>
+              <div @click="toggleLike(index)"><i v-show="!album.like" role="button" class="fa-regular fa-heart text-white text-right"></i> <i v-show="album.like" role="button" class="fa-solid fa-heart text-danger text-right"></i></div>
             </div></div>
 
           </div>
