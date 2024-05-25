@@ -16,6 +16,10 @@ if (isset($_POST["action"]) && $_POST["action"] === "togglelike") {
     $album_index = $_POST["album_index"];
     $dischi[$album_index]["like"] = !$dischi[$album_index]["like"];
   };
+  if (isset($_POST["action"]) && $_POST["action"] === "delete") {
+    $album_index = $_POST["album_index"];
+    array_splice($dischi, $album_index, 1);
+  };
 
 for ($i=0; $i <count($dischi) ; $i++) { 
     if(!isset($dischi[$i]["like"])){

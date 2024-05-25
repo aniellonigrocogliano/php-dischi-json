@@ -64,5 +64,20 @@ createApp({
           this.listaAlbum = resp.data.risultati;
         });
     },
+    deleteAlbum(index) {
+      const data = {
+        action: "delete",
+        album_index: index,
+      };
+      axios
+        .post("http://localhost/boolean/php-dischi-json/server.php", data, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((resp) => {
+          this.listaAlbum = resp.data.risultati;
+        });
+    },
   },
 }).mount("#app");
