@@ -12,6 +12,11 @@ $risposta = [
   ];
 }
 
+if (isset($_POST["action"]) && $_POST["action"] === "togglelike") {
+    $album_index = $_POST["album_index"];
+    $dischi[$album_index]["like"] = !$dischi[$album_index]["like"];
+  };
+
 for ($i=0; $i <count($dischi) ; $i++) { 
     if(!isset($dischi[$i]["like"])){
         $dischi[$i]["like"]= false;

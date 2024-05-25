@@ -77,7 +77,7 @@
               <p class="card-text text-white"><i class="fa-solid fa-user-pen"></i> {{ album.author }}</p>
               <p class="card-text text-white"><i class="fa-solid fa-icons"></i> {{ album.genre }}</p>
               <p class="card-text text-white"><i class="fa-solid fa-calendar-days"></i> {{ album.year }}</p>
-              <div><i class="fa-regular fa-thumbs-up text-white text-right"></i></div>
+              <div @click="toggleLike(index)"><i v-show="!album.like" class="fa-regular fa-heart text-white text-right"></i> <i v-show="album.like" class="fa-solid fa-heart text-danger text-right"></i></div>
             </div>
 
           </div>

@@ -49,5 +49,20 @@ createApp({
       this.newImmagine="";
       console.log(this.listaAlbum)
     },
+    toggleLike(index) {
+      const data = {
+        action: "togglelike",
+        album_index: index,
+      };
+      axios
+        .post("http://localhost/boolean/php-dischi-json/server.php", data, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((resp) => {
+          this.listaAlbum = resp.data.risultati;
+        });
+    },
   },
 }).mount("#app");
